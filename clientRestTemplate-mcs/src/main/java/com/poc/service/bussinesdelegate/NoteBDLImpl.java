@@ -52,7 +52,7 @@ public class NoteBDLImpl implements NoteBDL {
             }
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error while calling WS : {}, message : {}", createNote, e.getMessage());
+            log.error("Error createNote while calling WS : {}, message : {}", createNote, e.getMessage());
             e.printStackTrace();
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         }
@@ -77,7 +77,7 @@ public class NoteBDLImpl implements NoteBDL {
             }
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error while calling WS : {}, message : {}", updateNote, e.getMessage());
+            log.error("Error updateNote while calling WS : {}, message : {}", updateNote, e.getMessage());
             e.printStackTrace();
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         }
@@ -103,7 +103,7 @@ public class NoteBDLImpl implements NoteBDL {
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
 
         } catch (Exception e) {
-            log.error("Error while calling WS : {}, message : {}", deleteNoteById, e.getMessage());
+            log.error("Error deleteNoteById while calling WS : {}, message : {}", deleteNoteById, e.getMessage());
             e.printStackTrace();
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         }
@@ -129,7 +129,7 @@ public class NoteBDLImpl implements NoteBDL {
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
 
         } catch (Exception e) {
-            log.error("Error while calling WS : {}, message : {}", getNoteById, e.getMessage());
+            log.error("Error getNoteById while calling WS : {}, message : {}", getNoteById, e.getMessage());
             e.printStackTrace();
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         }
@@ -162,7 +162,7 @@ public class NoteBDLImpl implements NoteBDL {
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
 
         } catch (Exception e) {
-            log.error("Error while calling WS : {}, message : {}", getAllNotesByTitle, e.getMessage());
+            log.error("Error getAllNotesByTitle while calling WS : {}, message : {}", getAllNotesByTitle, e.getMessage());
             e.printStackTrace();
             throw new FunctionalException(ErrorsEnum.ERR_CALL_API_NOTE.getErrorMessage());
         }
