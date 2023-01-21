@@ -144,17 +144,13 @@ public class NoteBDLImpl implements NoteBDL {
             HttpHeaders headers = new HttpHeaders();
             headers.set("Accept", MediaType.APPLICATION_JSON_VALUE);
 
-            UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getAllNotesByTitle);
+            UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(getAllNotesByTitle)
+                    .queryParam("title", title)
+                    .queryParam("page", page)
+                    .queryParam("size", size);
             HttpEntity<?> entity = new HttpEntity<>(headers);
-
-            if (StringUtils.isBlank(title)) {
-                builder.queryParam("page", page).queryParam("size", size);
-            } else {
-                builder.queryParam("title", title)
-                        .queryParam("page", size)
-                        .queryParam("size", size);
-            }
             ResponseEntity<NotePaginatedDTO> response = restTemplate.exchange(builder.toUriString(), HttpMethod.GET, entity, NotePaginatedDTO.class);
+
             if (response.getStatusCode() == HttpStatus.OK) {
                 log.info("WS Request getAllNotesByTitle Successful");
                 return response.getBody();
