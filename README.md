@@ -18,7 +18,7 @@ Dans ce repo, nous allons avoir comment implementer Spring RestTemplate (avec Ex
 ### Exemples
 ---
 - `socle-spring-data-jpa` un microservice CRUD qui s'exécute sur le port 8081.
-- `clientRestTemplate-mcs` un client Spring WebClient qui s'exécute sur le port 8082 et utlise les API REST de `socle-spring-data-jpa`. 
+- `clientRestTemplate-mcs` un client Spring WebClient qui s'exécute sur le port 8082 et utilise les API REST de `socle-spring-data-jpa`. 
 
 ### Exécuter et tester le projet
 ---
